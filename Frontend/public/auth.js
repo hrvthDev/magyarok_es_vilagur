@@ -27,7 +27,7 @@ export async function authRegisterForm(e) {
         console.log("Sikeres regisztráció!");
         succesNotifaction();
         setTimeout(() => {
-            window.location.href = "index.html";
+            window.location.href = "login.html";
         }, 1500); 
     } catch (err) {
         console.error("Szerver hiba történt!", err);
