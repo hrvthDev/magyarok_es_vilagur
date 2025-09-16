@@ -17,7 +17,7 @@ app.use("/api", authRoutes);
 
 
 app.use((req, res) =>{
-  res.status(404).sendFile(path.join(__dirname, "../Frontend/public", "notfound.html"));
+  res.status(404).sendFile(path.join(__dirname, "../Frontend/public/pages/notfound.html"));
 })
 
 
