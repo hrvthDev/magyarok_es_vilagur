@@ -1,4 +1,4 @@
-import { errorNotifaction, succesNotifaction, dataValidation} from "./module.js";
+import { errorNotifaction, succesNotifaction, dataValidation} from "../js/module.js";
 
 export async function authRegisterForm(e) {
     e.preventDefault();

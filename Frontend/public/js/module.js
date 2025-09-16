@@ -1,5 +1,5 @@
 export const isLogin = () => {
-    const protectedRoutes = ["/index.html"];
+    const protectedRoutes = ["/pages/index.html", "/pages/tortenelem.html", "/pages/missziok.html", "/pages/mernok.html", "/pages/urhajosok"];
     const isLogin = localStorage.getItem("isLogin");
 
     const currentPage = window.location.pathname;
@@ -29,7 +29,7 @@ export const getUsername = () => {
     const headerUsername = document.getElementById("username2");
 
     if (username) {
-        welcomeMessage.textContent = `Üdvözöllek kedves ${username}`;
+        welcomeMessage.textContent = `Üdvözöllek kedves ${username} !`;
     } else {
         welcomeMessage.innerHTML = `Üdvözöllek kedves látogató, kérlek jelentkezz be az oldal megtekintéshez! Ha még nincs fiókod akkor a következő linken tudsz <a href="register.html">regisztrálni</a>`;
         welcomeMessage.classList.add("warning");
@@ -43,8 +43,13 @@ export const getUsername = () => {
 export const logout = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("isLogin");
-    window.location.href = "login.html";
-    alert("Sikeresen kijelentkeztél!");
+    succesLogin();
+
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 1500)
+
+
 };
 
 export const errorNotifaction = () => {
@@ -77,4 +82,17 @@ export const dataValidation = () => {
         },
         position: "center"
     }).showToast();
+}
+
+
+ const succesLogin = () => {
+
+    Toastify({
+        text: "Sikeresen kijelentkeztél!",
+        style:{
+            background: "green"
+        },
+        position: "center"
+    }).showToast();
+
 }

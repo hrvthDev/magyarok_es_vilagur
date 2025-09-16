@@ -1,0 +1,295 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+header{
+  background-color: rgb(95, 210, 255);
+  padding: 20px;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-center {
+  display: flex;
+  margin: 0 auto;
+  gap: 30px;
+  list-style: none;
+  
+}
+
+   .nav-center li {
+      position: relative;
+    }
+
+
+.nav-center a{
+  color: white;
+  text-decoration: none;
+  margin: 10px
+}
+
+
+.form-container{
+  background-color: rgb(95, 210, 255);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  border-radius: 10px;
+  padding: 50px;
+  width: 500px;
+  height: 350px;
+}
+
+.form-container h2{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.form-group {
+  margin: 10px ;
+  outline: none;
+  color: black;
+}
+
+.form-group input{
+  display: block;
+  outline: none;
+}
+
+
+input{
+  color: black;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: white;
+}
+
+button{
+  margin: auto;
+  display: block;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+
+#username2{
+  color: white;
+}
+
+.welcome-container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* ha be van lépve */
+.welcome-success {
+  background-color: #2e7d32; /* zöld */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ha nincs belépve */
+.warning {
+  background-color: #c62828; /* piros */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.notfound-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 350px auto;
+}
+
+#welcome-msg{
+  color: black;
+  font-size: 30px;
+  
+}
+
+
+
+
+
+.logo{
+    width: 10%;
+    height: 10%;
+}
+
+
+
+    /* Dropdown stílus */
+    .dropdown {
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(95, 210, 255);
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background: white;
+      color: black;
+    }
+
+    .show {
+      display: block;
+    }
+
+
+    #content-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(95, 210, 255);
+      height: 850;
+      margin:  auto 50px;
+      min-height: 350px
+
+    }
+
+
+    #content-box p{
+      width: 1200px;
+      text-align: center;
+      margin-top: 20px;
+      color: black;
+      font-size: 20px;
+    }
+
+    #content-body{
+      background-color: white;
+      padding: 50px;
+      margin: 20px auto;
+    }
+
+
+
+h2{
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+
+#content-container{
+    min-height: 800px; /* legalább ekkora, de nőhet */
+}
+
+footer {
+    background-color: rgb(95, 210, 255);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    position: fixed;
+}
+
+img{
+  height: 250px;
+}
+
+.orsolya{
+  float: right;
+}
+
+.norbert{
+  float: left;
+}
+
+.pacher{
+  float: right;
+}
+
+.dudas{
+  float: left;
+}
+
+#alahuzas{
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 150px auto;
+}
+
+#kapu{
+  text-align: right;
+}
+
+#parent{
+  margin: 50px;
+}
+
+h3, h4{
+  font-size: 25px;
+}
