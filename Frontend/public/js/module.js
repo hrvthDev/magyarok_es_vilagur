@@ -1,14 +1,20 @@
 export const isLogin = () => {
-    const protectedRoutes = ["/pages/index.html", "/pages/tortenelem.html", "/pages/missziok.html", "/pages/mernok.html", "/pages/urhajosok"];
+    const protectedRoutes = [
+        "/pages/index.html",
+        "/pages/missziok.html",
+        "/pages/mernok.html",
+        "/pages/urhajosok.html",
+    ];
     const isLogin = localStorage.getItem("isLogin");
 
     const currentPage = window.location.pathname;
     if (!isLogin && protectedRoutes.includes(currentPage)) {
-        alert("Először jelentkezz be!");
-        window.location.href = "login.html";
-        return false;
+        authGuard();
+        setTimeout(() => {
+            window.location.href = "login.html";
+            return false;
+        }, 3000);
     }
-
     return !!isLogin;
 };
 
@@ -47,9 +53,7 @@ export const logout = () => {
 
     setTimeout(() => {
         window.location.href = "login.html";
-    }, 1500)
-
-
+    }, 1500);
 };
 
 export const errorNotifaction = () => {
@@ -62,37 +66,42 @@ export const errorNotifaction = () => {
     }).showToast();
 };
 
-
 export const succesNotifaction = () => {
     Toastify({
         text: "Sikeresen bejelentkeztél/regisztráltál!",
-        style:{
+        style: {
             background: "green",
         },
-        position: "center"
+        position: "center",
     }).showToast();
-
-}
+};
 
 export const dataValidation = () => {
     Toastify({
         text: "Kötelező megadni az adatokat!",
-        style:{
+        style: {
             background: "red",
         },
-        position: "center"
+        position: "center",
     }).showToast();
-}
+};
 
-
- const succesLogin = () => {
-
+const succesLogin = () => {
     Toastify({
         text: "Sikeresen kijelentkeztél!",
-        style:{
-            background: "green"
+        style: {
+            background: "green",
         },
-        position: "center"
+        position: "center",
     }).showToast();
+};
 
-}
+const authGuard = () => {
+    Toastify({
+        text: "Elsőnek jelentkezz be!",
+        style: {
+            background: "red",
+        },
+        position: "center",
+    }).showToast();
+};

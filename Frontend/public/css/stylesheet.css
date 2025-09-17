@@ -119,16 +119,14 @@ button{
   text-align: center;
 }
 
-/* ha be van lépve */
 .welcome-success {
-  background-color: #2e7d32; /* zöld */
+  background-color: #2e7d32; 
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* ha nincs belépve */
 .warning {
-  background-color: #c62828; /* piros */
+  background-color: #c62828; 
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
@@ -144,7 +142,7 @@ button{
 }
 
 #welcome-msg{
-  color: black;
+  color: white;
   font-size: 30px;
   
 }
@@ -160,7 +158,6 @@ button{
 
 
 
-    /* Dropdown stílus */
     .dropdown {
       cursor: pointer;
       color: white;
@@ -232,7 +229,7 @@ h2{
 
 
 #content-container{
-    min-height: 800px; /* legalább ekkora, de nőhet */
+    min-height: 800px; 
 }
 
 footer {
@@ -292,4 +289,9 @@ img{
 
 h3, h4{
   font-size: 25px;
+}
+
+.auth{
+  color: white;
+  margin-bottom: 10px;
 }
